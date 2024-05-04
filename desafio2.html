@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+  <p>CEP: <input type="text"></p> 
+  <p><button id="bt_ok">OK</button></p>
+  <h2>Resposta:</h2>
+  <p id="resp"></p>
+
+  <script>
+    $(document).ready(function(){
+        $("#bt_ok").on("click", function(){
+            $.ajax({
+                url: "https://jsonp.afeld.me/?url=https://api.postmon.com.br/v1/cep/" + 13279071 + "/",
+                dataType:"json",
+                success:function(data){
+                    $("#resp").html(
+                        "<p>CEP: "+data.cep+"</p>"+
+                        "<p>Logradouro: "+data.logradouro+"</p>"+
+                        "<p>Complemento: "+data.complemento+"</p>"+
+                        "<p>Bairro: "+data.bairro+"</p>"+
+                        "<p>Localidade: "+data.localidade+"</p>"+
+                        "<p>UF: "+data.uf+"</p>"+
+                        "<p>IBGE: "+data.ibge+"</p>"+
+                        "<p>gia: "+data.gia+"</p>"+
+                        "<p>ddd: "+data.ddd+"</p>"+
+                        "<p>siafi: "+data.siafi+"</p>"
+                    );
+                }
+            });
+        });
+    });
+  </script>
+</body>
+</html>

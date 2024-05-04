@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual tecla você pressionou</title>
+    <style>
+        p{
+            background-color: navy;
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            font: normal 25pt Arial;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }input{
+            font: normal 16pt Arial;
+            width: 100%;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vamos mudar a cor do botão</h1>
+    <p id="cor">Vamos alterar a cor desse texto!</p>
+    <input type="button" value="Mudar Cor" onclick="mudar()">
+
+    <script>
+        function mudar(){
+            var b = document.getElementById('cor')
+            b.style.backgroundColor = 'orange'
+        }
+    </script>
+
+
+
+</body>
+</html>

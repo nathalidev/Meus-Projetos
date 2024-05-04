@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="escrito">Mude a cor da tela nas cores disponíveis nos botões</p>
+    <button id="botao1">Azul</button>
+    <button id="botao2">Amarelo</button>
+    <button id="botao3">Vermelho</button>
+</body>
+<script>
+    $(function(){
+        $("body").css( "text-align", "center");
+        $("body").css("margin-top", "23%");
+        $("#botao1").click(function(){
+            $("body").css("background-color", "blue");
+        });
+
+        $("#botao2").click(function(){
+            $("body").css("background-color", "yellow");
+        });
+
+        $("#botao3").click(function(){
+            $("body").css("background-color", "red");
+        });
+    });
+</script>
+</html>

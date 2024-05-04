@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações da Planta</title>
+</head>
+<body>
+    <?php
+    include 'Planta.php';
+    $minhaPlanta = new Planta("Girassol", "Helianthus annuus", "Brasil", 1.5, "Angiosperma", 2);
+    ?>
+
+    <h1>Informações da Planta</h1>
+    <ul>
+        <li><strong>Nome Popular:</strong> <input type="text" value="<?php echo $minhaPlanta->getNomePopular(); ?>" readonly></li>
+        <li><strong>Nome Científico:</strong> <input type="text" value="<?php echo $minhaPlanta->getNomeCientifico(); ?>" readonly></li>
+        <li><strong>Origem:</strong> <input type="text" value="<?php echo $minhaPlanta->getOrigem(); ?>" readonly></li>
+        <li><strong>Tamanho:</strong> <input type="text" value="<?php echo $minhaPlanta->getTamanho(); ?>" readonly> metros</li>
+        <li><strong>Espécie:</strong> <input type="text" value="<?php echo $minhaPlanta->getEspecie(); ?>" readonly></li>
+        <li><strong>Idade:</strong> <input type="text" value="<?php echo $minhaPlanta->getIdade(); ?>" readonly> anos</li>
+        <li><strong>Consumo de Água:</strong> <input type="text" value="<?php echo $minhaPlanta->calculaAgua(); ?>" readonly> litros por dia</li>
+    </ul>
+</body>
+</html>

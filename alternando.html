@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        input{
+            font: normal 16pt Arial;
+            width: 150px;
+        } p {
+            font-size: 20pt
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternando Texto</title>
+</head>
+<body>
+    <h1>Bora alternar esse texto!</h1>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+       <br>
+       Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+       <br>
+       Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+       <input type="button" value="Mudar Texto" onclick="mudar()">
+    
+    <script>
+        function mudar(){
+            var b = document.getElementById('texto')
+            b.innerText = 'Boa! O texto foi alterado, ufaaa...'
+        }
+    </script>
+</body>
+</html>

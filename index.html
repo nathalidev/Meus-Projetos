@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome 
+do{
+    nome = prompt("Qual seu nome?")
+    if (typeof nome !== 'string') {
+        alert("Por favor, insira um nome válido.")
+    }
+} while (typeof nome !== 'string')
+
+var idade
+do { 
+    idade = prompt("Qual a sua idade?")
+    idade = parseInt(idade)
+    
+    if (isNaN(idade) || idade < 0) {
+        alert("Por favor, insira um número inteiro para a idade.")
+    }
+}while (isNaN(idade) || idade < 0)
+
+var temPet
+do {
+    temPet = prompt("Você tem um animal de estimação? \nDigite 1 para 'sim' \nDigite 2 para 'não'");
+    if (temPet === '1') {
+        temPet = true;
+    } else if (temPet === '2') {
+        temPet = false;
+    } else {
+        alert("Por favor, insira '1' para sim ou '2' para não.");
+    }
+} while (temPet !== true && temPet !== false)
+
+
+alert ("Nome: "+ nome + "/ O tipo de dado inserido é: "+ typeof nome)
+alert ("Idade: "+ idade + "/ O tipo de dado inserido é: "+ typeof idade)
+alert ("Ele(a) possui algum pet? "+ temPet + "/ O tipo de dado inserido é: "+ typeof temPet)
+
+
+
+    </script>
+</body>
+</html>
